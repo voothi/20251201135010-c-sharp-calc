@@ -26,27 +26,21 @@ A modern two-layer calculator application with a **Vue.js frontend** and **.NET 
 * **Responsive UI**: Adapts to different screen sizes
 * **Dark Mode Compatible**: Visible in both light and dark browser themes
 
----
-
 ## Architecture
 
 ```
-┌─────────────────┐         HTTP POST          ┌─────────────────┐
-│   Vue.js        │ ────────────────────────▶  │  .NET Core      │
-│   Frontend      │                             │  Web API        │
-│   Port 5173     │ ◀────────────────────────  │  Port 5238      │
-└─────────────────┘      JSON Response         └─────────────────┘
++-------------------+      HTTP POST       +-------------------+
+|   Vue.js          | -------------------> |  .NET Core        |
+|   Frontend        |                      |  Web API          |
+|   Port 5173       | <------------------- |  Port 5238        |
++-------------------+   JSON Response      +-------------------+
 ```
-
----
 
 ## Prerequisites
 
 1. **Node.js** (v16 or higher) and npm
 2. **.NET SDK** (v8.0 or higher)
 3. Modern web browser (Chrome, Firefox, Edge, Safari)
-
----
 
 ## Installation and Setup
 
@@ -82,8 +76,6 @@ The frontend will start on `http://localhost:5173`
 
 Navigate to `http://localhost:5173` in your browser.
 
----
-
 ## Usage
 
 | Action | Method | Description |
@@ -98,8 +90,6 @@ Navigate to `http://localhost:5173` in your browser.
 1. Click `(`, `3`, `*`, `4`, `)`, `+`, `5`
 2. Click `=`
 3. Result `17` is displayed
-
----
 
 ## Project Structure
 
@@ -122,8 +112,6 @@ Navigate to `http://localhost:5173` in your browser.
 │   └── vite.config.js
 └── README.md
 ```
-
----
 
 ## API Endpoint
 
@@ -148,8 +136,6 @@ Navigate to `http://localhost:5173` in your browser.
 400 Bad Request
 "Error calculating expression: ..."
 ```
-
----
 
 ## License
 
