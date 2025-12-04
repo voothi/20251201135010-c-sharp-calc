@@ -28,4 +28,4 @@ if (-not (Test-Path "node_modules")) {
     npm install
 }
 
-npm run dev
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$frontendPath'; npm run dev"
