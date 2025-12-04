@@ -40,5 +40,5 @@ public class CalculatorController : ControllerBase
 
 public class CalculationRequest
 {
-    public string Expression { get; set; }
+    public required string Expression { get; set; }
 }
